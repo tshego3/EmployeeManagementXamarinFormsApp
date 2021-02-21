@@ -25,7 +25,7 @@ namespace EmployeeManagementXamarinFormsApp.Services
             var json = JsonConvert.SerializeObject(model);
             HttpContent content = new StringContent(json);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            var response = await client.PostAsync("http://localhost:800/api/Account/Register", content);
+            var response = await client.PostAsync("http://192.168.0.139:800/api/Account/Register", content);
             return response.IsSuccessStatusCode;
         }
     }
