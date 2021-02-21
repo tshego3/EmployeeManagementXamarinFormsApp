@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementXamarinFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementXamarinFormsApp.iOS", "EmployeeManagementXamarinFormsApp.iOS\EmployeeManagementXamarinFormsApp.iOS.csproj", "{793147D6-80DD-4C31-BC9E-18B076275221}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementXamarinFormsApp", "EmployeeManagementXamarinFormsApp\EmployeeManagementXamarinFormsApp.csproj", "{F9F9C322-EB75-4F58-B754-F4DA684ADB90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagementXamarinFormsApp", "EmployeeManagementXamarinFormsApp\EmployeeManagementXamarinFormsApp.csproj", "{F9F9C322-EB75-4F58-B754-F4DA684ADB90}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementAPI", "..\EmployeeManagementAPI\EmployeeManagementAPI\EmployeeManagementAPI.csproj", "{296646D4-B524-4D2F-AC3A-0E556C636551}"
 EndProject
@@ -30,8 +30,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|Any CPU.Build.0 = Debug|x86
-		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|ARM.ActiveCfg = Debug|ARM
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|ARM.Build.0 = Debug|ARM
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -44,9 +42,9 @@ Global
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|x64.ActiveCfg = Debug|x64
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|x64.Build.0 = Debug|x64
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|x64.Deploy.0 = Debug|x64
-		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|x86.ActiveCfg = Debug|x86
-		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|x86.Build.0 = Debug|x86
-		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|x86.Deploy.0 = Debug|x86
+		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|x86.ActiveCfg = Debug|x64
+		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|x86.Build.0 = Debug|x64
+		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Debug|x86.Deploy.0 = Debug|x64
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Release|Any CPU.ActiveCfg = Release|x86
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Release|Any CPU.Build.0 = Release|x86
 		{6ADAF3DE-5439-460B-9B5F-D4B94F6D75D6}.Release|Any CPU.Deploy.0 = Release|x86
@@ -102,7 +100,6 @@ Global
 		{FA73A859-C617-458A-B830-219D08D3DE7D}.Release|x86.Build.0 = Release|Any CPU
 		{FA73A859-C617-458A-B830-219D08D3DE7D}.Release|x86.Deploy.0 = Release|Any CPU
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|ARM.Build.0 = Debug|iPhone
@@ -114,10 +111,8 @@ Global
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|iPhoneSimulator.Deploy.0 = Debug|iPhoneSimulator
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|x64.ActiveCfg = Debug|iPhoneSimulator
-		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|x64.Build.0 = Debug|iPhoneSimulator
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|x64.Deploy.0 = Debug|iPhoneSimulator
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|x86.ActiveCfg = Debug|iPhoneSimulator
-		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|x86.Build.0 = Debug|iPhoneSimulator
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Debug|x86.Deploy.0 = Debug|iPhoneSimulator
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
 		{793147D6-80DD-4C31-BC9E-18B076275221}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
@@ -184,7 +179,6 @@ Global
 		{296646D4-B524-4D2F-AC3A-0E556C636551}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{296646D4-B524-4D2F-AC3A-0E556C636551}.Debug|x64.Build.0 = Debug|Any CPU
 		{296646D4-B524-4D2F-AC3A-0E556C636551}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{296646D4-B524-4D2F-AC3A-0E556C636551}.Debug|x86.Build.0 = Debug|Any CPU
 		{296646D4-B524-4D2F-AC3A-0E556C636551}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{296646D4-B524-4D2F-AC3A-0E556C636551}.Release|Any CPU.Build.0 = Release|Any CPU
 		{296646D4-B524-4D2F-AC3A-0E556C636551}.Release|ARM.ActiveCfg = Release|Any CPU
