@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeManagementXamarinFormsApp.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,8 @@ namespace EmployeeManagementXamarinFormsApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+            MainPage = new RegisterPage();
         }
 
         protected override void OnStart()

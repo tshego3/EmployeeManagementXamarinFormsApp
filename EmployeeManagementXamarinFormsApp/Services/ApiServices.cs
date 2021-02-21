@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,6 +24,7 @@ namespace EmployeeManagementXamarinFormsApp.Services
 
             var json = JsonConvert.SerializeObject(model);
             HttpContent content = new StringContent(json);
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             var response = await client.PostAsync("http://localhost:800/api/Account/Register", content);
             return response.IsSuccessStatusCode;
         }
