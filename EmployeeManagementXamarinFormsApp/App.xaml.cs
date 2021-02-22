@@ -12,7 +12,7 @@ namespace EmployeeManagementXamarinFormsApp
             InitializeComponent();
 
             //MainPage = new MainPage();
-            MainPage = new RegisterPage();
+            MainPage = new NavigationPage(new RegisterPage());
         }
 
         protected override void OnStart()

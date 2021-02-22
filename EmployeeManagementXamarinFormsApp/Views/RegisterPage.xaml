@@ -15,7 +15,9 @@
 
         <Button Command="{Binding RegisterCommand}" Text="Register" />
 
-        <Label Text="{Binding Message}" />
+        <Label ClassId="lblMessage" Text="{Binding Message}" TextColor="#000000" />
+
+        <Button ClassId="btnLogin"  Command="{Binding RegisterCommand}" Text="Login" Clicked="Button_Clicked"/>
     </StackLayout>
     
 </ContentPage>
