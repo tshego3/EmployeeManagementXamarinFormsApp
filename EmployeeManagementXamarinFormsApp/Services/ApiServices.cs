@@ -1,5 +1,6 @@
 ﻿using EmployeeManagementXamarinFormsApp.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -32,7 +33,7 @@ namespace EmployeeManagementXamarinFormsApp.Services
         }
 
         //***Login Button
-        public async Task LoginAsync(string userName, string password)
+        public async Task<string> LoginAsync(string userName, string password)
         {
             var keyValues = new List<KeyValuePair<string, string>>
             {
@@ -48,8 +49,14 @@ namespace EmployeeManagementXamarinFormsApp.Services
             var client = new HttpClient();
             var response = await client.SendAsync(request);
 
-            var content = await response.Content.ReadAsStringAsync();
-            Debug.WriteLine(content);
+            //var content = await response.Content.ReadAsStringAsync();
+            //Debug.WriteLine(content);
+
+            var jwt = await response.Content.ReadAsStringAsync();
+            JObject jwtDynamic = JsonConvert.DeserializeObject<dynamic>(jwt);
+            var accessToken = jwtDynamic.Value<string>("access_token");
+            Debug.WriteLine(jwt);
+            return accessToken;
         }
 
         //***Loads All Employees

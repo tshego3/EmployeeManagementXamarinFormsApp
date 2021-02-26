@@ -1,4 +1,5 @@
-﻿using EmployeeManagementXamarinFormsApp.Models;
+﻿using EmployeeManagementXamarinFormsApp.Helpers;
+using EmployeeManagementXamarinFormsApp.Models;
 using EmployeeManagementXamarinFormsApp.Services;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
     {
         ApiServices _apiServices = new ApiServices();
 
-        public string AccessToken { get; set; }
+        //public string AccessToken { get; set; }
         public List<EmployeeBindingModel> Employees
         {
             get { return Employees; }
@@ -30,7 +31,9 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
             {
                 return new Command(async () =>
                 {
-                    Employees = await _apiServices.GetEmployeesAsync(AccessToken);
+                    //Employees = await _apiServices.GetEmployeesAsync(AccessToken);
+                    var accesstoken = Settings.AccessToken;
+                    Employees = await _apiServices.GetEmployeesAsync(accesstoken);
                 });
             }
         }

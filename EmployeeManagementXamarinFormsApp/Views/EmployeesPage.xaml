@@ -9,6 +9,7 @@
     </ContentPage.BindingContext>
 
     <StackLayout Orientation="Vertical">
+        <Button Command="{Binding GetEmployeesCommand}" Text="Get All Employees" />
         <ListView ItemsSource="{Binding EmployeeBindingModel}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>

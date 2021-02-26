@@ -15,8 +15,6 @@ namespace EmployeeManagementXamarinFormsApp.Helpers
                 return CrossSettings.Current;
             }
         }
-
-
         public static string Username
         {
             get
@@ -37,6 +35,17 @@ namespace EmployeeManagementXamarinFormsApp.Helpers
             set
             {
                 AppSettings.AddOrUpdateValue("Password", value);
+            }
+        }
+        public static string AccessToken
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("AccessToken", "");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("AccessToken", value);
             }
         }
     }

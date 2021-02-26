@@ -1,4 +1,5 @@
-﻿using EmployeeManagementXamarinFormsApp.Services;
+﻿using EmployeeManagementXamarinFormsApp.Helpers;
+using EmployeeManagementXamarinFormsApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,9 +21,16 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
             {
                 return new Command(async () =>
                 {
-                    await _apiServices.LoginAsync(Username, Password);
+                    var accesstoken = await _apiServices.LoginAsync(Username, Password);
+                    Settings.AccessToken = accesstoken;
                 });
             }
+        }
+
+        public LoginViewModel()
+        {
+            Username = Settings.Username;
+            Password = Settings.Password;
         }
     }
 }

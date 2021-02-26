@@ -1,4 +1,5 @@
-﻿using EmployeeManagementXamarinFormsApp.Services;
+﻿using EmployeeManagementXamarinFormsApp.Helpers;
+using EmployeeManagementXamarinFormsApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,6 +25,9 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
                 return new Command(async() =>
                 {
                     var IsSuccess = await _apiServices.RegisterAsync(Email, Password, ConfirmPassword);
+
+                    Settings.Username = Email;
+                    Settings.Password = Password;
 
                     if (IsSuccess)
                     {
