@@ -28,7 +28,7 @@ namespace EmployeeManagementXamarinFormsApp.Services
             var json = JsonConvert.SerializeObject(model);
             HttpContent content = new StringContent(json);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            var response = await client.PostAsync("http://192.168.137.247:800/api/Account/Register", content);
+            var response = await client.PostAsync("http://192.168.0.139:800/api/Account/Register", content);
             return response.IsSuccessStatusCode;
         }
 
@@ -42,7 +42,7 @@ namespace EmployeeManagementXamarinFormsApp.Services
                 new KeyValuePair<string, string>("grant_type", "password")
             };
 
-            var request = new HttpRequestMessage(HttpMethod.Post, "http://192.168.137.247:800/Token");
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://192.168.0.139:800/Token");
 
             request.Content = new FormUrlEncodedContent(keyValues);
 
@@ -64,7 +64,7 @@ namespace EmployeeManagementXamarinFormsApp.Services
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-            var json = await client.GetStringAsync("http://192.168.137.247:800/api/Employees");
+            var json = await client.GetStringAsync("http://192.168.0.139:800/api/Employees");
             var employees = JsonConvert.DeserializeObject<List<EmployeeBindingModel>>(json);
             return employees;
         }
