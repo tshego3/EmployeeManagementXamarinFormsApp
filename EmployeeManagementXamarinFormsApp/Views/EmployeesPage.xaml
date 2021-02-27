@@ -10,15 +10,15 @@
 
     <StackLayout Orientation="Vertical">
         <Button Command="{Binding GetEmployeesCommand}" Text="Get All Employees" />
-        <ListView ItemsSource="{Binding EmployeeBindingModel}" HasUnevenRows="True">
+        <ListView ItemsSource="{Binding Employees}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <Label Text="{Binding tbFirstName}"/>
-                            <Label Text="{Binding tbSurname}"/>
-                            <Label Text="{Binding tbTellNo}"/>
-                            <Label Text="{Binding tbEmail}"/>
+                            <Label Text="{Binding TbFirstName}"/>
+                            <Label Text="{Binding TbSurname}"/>
+                            <Label Text="{Binding TbTellNo}"/>
+                            <Label Text="{Binding TbEmail}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

@@ -6,11 +6,11 @@ namespace EmployeeManagementXamarinFormsApp.Models
 {
     public class EmployeeBindingModel
     {
-        public int employeeID { get; set; }
-        public string tbFirstName { get; set; }
-        public string tbSurname { get; set; }
-        public string tbTellNo { get; set; }
-        public string tbEmail { get; set; }
+        public int EmployeeID { get; set; }
+        public string TbFirstName { get; set; }
+        public string TbSurname { get; set; }
+        public string TbTellNo { get; set; }
+        public string TbEmail { get; set; }
         public string UserID { get; set; }
     }
 }

@@ -14,14 +14,15 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
     public class EmployeesViewModel : INotifyPropertyChanged
     {
         ApiServices _apiServices = new ApiServices();
+        private List<EmployeeBindingModel> _employees;
 
         //public string AccessToken { get; set; }
         public List<EmployeeBindingModel> Employees
         {
-            get { return Employees; }
+            get { return _employees; }
             set
             {
-                Employees = value;
+                _employees = value;
                 OnPropertyChanged();
             }
         }
