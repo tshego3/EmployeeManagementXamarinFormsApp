@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace EmployeeManagementXamarinFormsApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EmployeesPage : ContentPage
+    public partial class AddNewEmployeePage : ContentPage
     {
-        public EmployeesPage()
+        public AddNewEmployeePage()
         {
             InitializeComponent();
-        }
-
-        private async void GoToAddNewEmployeePage_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new AddNewEmployeePage());
         }
     }
 }
