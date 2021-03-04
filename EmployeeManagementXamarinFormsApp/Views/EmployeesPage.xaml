@@ -8,10 +8,14 @@
         <viewModels:EmployeesViewModel />
     </ContentPage.BindingContext>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Command="{Binding LogoutCommand}" Clicked="Logout_Clicked" />
+    </ContentPage.ToolbarItems>
+
     <StackLayout Orientation="Vertical">
         <Button Command="{Binding GetEmployeesCommand}" Text="Get All Employees" />
         <Button Text="Add New Employee" Clicked="GoToAddNewEmployeePage_Clicked"/>
-        <ListView ItemsSource="{Binding Employees}" HasUnevenRows="True">
+        <ListView ItemsSource="{Binding Employees}" HasUnevenRows="True" ItemTapped="GoToEditEmployeePage_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

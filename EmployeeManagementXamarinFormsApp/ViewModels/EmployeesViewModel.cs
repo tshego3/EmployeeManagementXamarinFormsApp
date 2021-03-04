@@ -39,6 +39,19 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
             }
         }
 
+        public ICommand LogoutCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Settings.AccessToken = "";
+                    Settings.Username = "";
+                    Settings.Password = "";
+                });
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

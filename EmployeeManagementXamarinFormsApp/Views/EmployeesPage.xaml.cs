@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeManagementXamarinFormsApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,17 @@ namespace EmployeeManagementXamarinFormsApp.Views
         private async void GoToAddNewEmployeePage_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddNewEmployeePage());
+        }
+
+        private async void GoToEditEmployeePage_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var employeeBindingModel = e.Item as EmployeeBindingModel;
+            await Navigation.PushAsync(new EditEmployeePage(employeeBindingModel));
+        }
+
+        private async void Logout_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
         }
     }
 }

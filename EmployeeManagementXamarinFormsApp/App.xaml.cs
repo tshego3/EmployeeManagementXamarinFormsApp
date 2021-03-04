@@ -1,4 +1,5 @@
 ﻿using EmployeeManagementXamarinFormsApp.Helpers;
+using EmployeeManagementXamarinFormsApp.ViewModels;
 using EmployeeManagementXamarinFormsApp.Views;
 using System;
 using Xamarin.Forms;
@@ -21,6 +22,11 @@ namespace EmployeeManagementXamarinFormsApp
         {
             if (!string.IsNullOrEmpty(Settings.AccessToken))
             {
+                if (DateTime.UtcNow > Settings.AccessTokenExpiration)
+                {
+                    var vm = new LoginViewModel();
+                    vm.LoginCommand.Execute(null);
+                }
                 MainPage = new NavigationPage(new EmployeesPage());
             }
             else if (!string.IsNullOrEmpty(Settings.Username) && string.IsNullOrEmpty(Settings.Password))

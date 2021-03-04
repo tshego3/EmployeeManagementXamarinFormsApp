@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeManagementXamarinFormsApp.Views.EditEmployeePage"
+             xmlns:viewModels="clr-namespace:EmployeeManagementXamarinFormsApp.ViewModels">
+
+    <!--<ContentPage.BindingContext>
+        <viewModels:EditEmployeeViewModel />
+    </ContentPage.BindingContext>-->
+
+    <StackLayout Orientation="Vertical">
+        <Entry Text="{Binding TbFirstName}" />
+        <Entry Text="{Binding TbSurname}" />
+        <Entry Text="{Binding TbTellNo}" />
+        <Entry Text="{Binding TbEmail}" />
+
+        <Button Command="{Binding PutEmployeeCommand}" Text="Update" />
+        <Button Command="{Binding DeleteEmployeeCommand}" Text="Delete" />
+    </StackLayout>
+
+</ContentPage>
