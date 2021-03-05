@@ -13,7 +13,7 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
     {
         ApiServices _apiServices = new ApiServices();
 
-        public EmployeeBindingModel employeeBindingModel { get; set; }
+        public EmployeeBindingModel Employee { get; set; } //***ALWAYS MAKE PROPERTIES NAME'S CAMEL CASE.***
 
         public ICommand PutEmployeeCommand
         {
@@ -22,7 +22,7 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
                 return new Command(async () =>
                 {
                     var accesstoken = Settings.AccessToken;
-                    await _apiServices.PutEmployeeAsync(employeeBindingModel, accesstoken);
+                    await _apiServices.PutEmployeeAsync(Employee, Settings.AccessToken);
                 });
             }
         }
@@ -34,7 +34,7 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
                 return new Command(async () =>
                 {
                     var accesstoken = Settings.AccessToken;
-                    await _apiServices.DeleteEmployeeAsync(employeeBindingModel.EmployeeID, accesstoken);
+                    await _apiServices.DeleteEmployeeAsync(Employee.EmployeeID, Settings.AccessToken);
                 });
             }
         }

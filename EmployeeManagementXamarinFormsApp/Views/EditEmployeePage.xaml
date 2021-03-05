@@ -9,10 +9,10 @@
     </ContentPage.BindingContext>-->
 
     <StackLayout Orientation="Vertical">
-        <Entry Text="{Binding TbFirstName}" />
-        <Entry Text="{Binding TbSurname}" />
-        <Entry Text="{Binding TbTellNo}" />
-        <Entry Text="{Binding TbEmail}" />
+        <Entry Text="{Binding Employee.TbFirstName}" />
+        <Entry Text="{Binding Employee.TbSurname}" />
+        <Entry Text="{Binding Employee.TbTellNo}" />
+        <Entry Text="{Binding Employee.TbEmail}" />
 
         <Button Command="{Binding PutEmployeeCommand}" Text="Update" />
         <Button Command="{Binding DeleteEmployeeCommand}" Text="Delete" />
