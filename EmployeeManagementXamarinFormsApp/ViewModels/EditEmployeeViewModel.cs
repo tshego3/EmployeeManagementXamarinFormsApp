@@ -22,7 +22,7 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
                 return new Command(async () =>
                 {
                     var accesstoken = Settings.AccessToken;
-                    await _apiServices.PutEmployeeAsync(Employee, Settings.AccessToken);
+                    await _apiServices.PutEmployeeAsync(Employee, accesstoken);
                 });
             }
         }
@@ -34,7 +34,7 @@ namespace EmployeeManagementXamarinFormsApp.ViewModels
                 return new Command(async () =>
                 {
                     var accesstoken = Settings.AccessToken;
-                    await _apiServices.DeleteEmployeeAsync(Employee.EmployeeID, Settings.AccessToken);
+                    await _apiServices.DeleteEmployeeAsync(Employee.EmployeeID, accesstoken);
                 });
             }
         }
