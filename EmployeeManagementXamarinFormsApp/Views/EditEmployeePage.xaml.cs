@@ -16,15 +16,15 @@ namespace EmployeeManagementXamarinFormsApp.Views
     {
         public EditEmployeePage(EmployeeBindingModel employeeBindingModel)
         {
-            var editEmployeeViewModel = new EditEmployeeViewModel();
-            editEmployeeViewModel.Employee = employeeBindingModel;
-            BindingContext = editEmployeeViewModel;
-
-            InitializeComponent();
-
             //var editEmployeeViewModel = new EditEmployeeViewModel();
             //editEmployeeViewModel.Employee = employeeBindingModel;
             //BindingContext = editEmployeeViewModel;
+
+            InitializeComponent();
+
+            var editEmployeeViewModel = new EditEmployeeViewModel();
+            editEmployeeViewModel.Employee = employeeBindingModel;
+            BindingContext = editEmployeeViewModel;
         }
     }
 }

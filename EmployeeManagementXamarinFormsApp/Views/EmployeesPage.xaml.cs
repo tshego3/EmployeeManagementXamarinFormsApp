@@ -33,5 +33,10 @@ namespace EmployeeManagementXamarinFormsApp.Views
         {
             await Navigation.PushAsync(new LoginPage());
         }
+
+        private async void GoToSearchEmployeePage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SearchEmployeePage());
+        }
     }
 }

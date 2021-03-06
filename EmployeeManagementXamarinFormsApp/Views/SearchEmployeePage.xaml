@@ -1,22 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EmployeeManagementXamarinFormsApp.Views.EmployeesPage"
-             xmlns:viewModels="clr-namespace:EmployeeManagementXamarinFormsApp.ViewModels">
+             x:Class="EmployeeManagementXamarinFormsApp.Views.SearchEmployeePage"
+             xmlns:viewModels="clr-namespace:EmployeeManagementXamarinFormsApp.ViewModels"
+             Title="Search Employee">
 
     <ContentPage.BindingContext>
-        <viewModels:EmployeesViewModel />
+        <viewModels:SearchEmployeeViewModel />
     </ContentPage.BindingContext>
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Logout" Command="{Binding LogoutCommand}" Clicked="Logout_Clicked" />
-    </ContentPage.ToolbarItems>
-
     <StackLayout Orientation="Vertical">
-        <Button Command="{Binding GetEmployeesCommand}" Text="Get All Employees" />
-        <Button Text="Add New Employee" Clicked="GoToAddNewEmployeePage_Clicked"/>
-        <Button Text="Search Employee" Clicked="GoToSearchEmployeePage_Clicked"/>
-        <ListView ItemsSource="{Binding Employees}" HasUnevenRows="True" ItemTapped="GoToEditEmployeePage_ItemTapped">
+        <SearchBar Text="{Binding Keyword}" />
+        <Button Command="{Binding SearchEmployeesCommand}" Text="Search" />
+
+        <ListView ItemsSource="{Binding Employees}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
